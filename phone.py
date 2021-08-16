@@ -4,10 +4,6 @@ from tkinter import *
 from tkinter import scrolledtext
 
 df = pd.DataFrame(columns =['Name','Telephone','Note'])
-# Запись пустого Датафрейма в файл.Использовать 1 раз
-#остальную часть закомментить
-#df.to_csv(r'tel.csv',header = ['Name','Telephone','Note'],sep =',',  mode='w',index = False)
-##print(df)
 
 #очистка полей ввода
 def del_field():
