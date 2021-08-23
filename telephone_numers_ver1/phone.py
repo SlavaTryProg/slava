@@ -4,6 +4,10 @@ from tkinter import *
 from tkinter import scrolledtext
 
 df = pd.DataFrame(columns =['Name','Telephone','Note'])
+# Запись пустого Датафрейма в файл.Использовать 1 раз
+#остальную часть закомментить
+#df.to_csv(r'tel.csv',header = ['Name','Telephone','Note'],sep =',',  mode='w',index = False)
+##print(df)
 
 #очистка полей ввода
 def del_field():
@@ -23,7 +27,7 @@ def write():
     # Возможность использовать русские буквы в csv
     #df.to_csv(r'tel.csv',header = ['Name','Telephone','Note'], index = False,mode='w',encoding = 'cp1251')
     #df.to_csv('file.csv',encoding='utf-8-sig')
-    df.to_csv(r'tel.csv', header = False,index = False,mode='a')
+    df.to_csv(r'tel.csv', header = ['Name','Telephone','Note'],index = False,mode='w')
     print(df)
     t_book.insert(INSERT,df) 
     del_field()
