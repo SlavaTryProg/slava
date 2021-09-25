@@ -1,0 +1,15 @@
+import numpy as np
+rang_matrix = int(input())
+A = []
+B = []
+for i in range(rang_matrix):
+    s = input().split()
+    A.extend([s[:-1]])
+    B.append(s[-1])
+
+A = np.array(A,dtype = 'float')
+B = np.array(B,dtype = 'float')
+if np.linalg.det(A) == 0:
+    print("Матрица системы вырожденная")
+else:
+    print(*np.linalg.solve(A,B))
